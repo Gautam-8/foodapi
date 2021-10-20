@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style></style>
+
+<link rel="stylesheet"  href="/styles/stylef.css"/>
+
+<body>
+  
+    <div id="navbardiv"></div>
+
+      <div id='search'>
+        <input  type='text'  id="food" placeholder="Search food"/>
+        <button id = "chat"><img src="https://img.icons8.com/ios/2x/search.png"/></button>
+      </div>
+    
+   <div id="container"></div>
+
+</body>
+</html>
+<script type="module">
+
+import navbar from "./components/navbar.js"; 
+
+let navbardiv = document.getElementById('navbardiv');
+     navbardiv.innerHTML = navbar();
+
+   
+     import {foodshow,append,foodd} from "./script/showfood.js";
+
+
+
+
+let chat = document.getElementById('chat');
+chat.addEventListener('click',foodd);
+
+
+
+</script>
